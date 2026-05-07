@@ -1,0 +1,21 @@
+import { createRouter, createWebHistory } from 'vue-router';
+import InvoiceView from "../views/InvoiceView.vue";
+
+const router = createRouter({
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes: [
+        {
+            path: '/',
+            redirect: '/dashboard' // Redirect the home page to invoices
+        },
+        {
+            path: '/dashboard',
+            name: 'dashboard',
+            component: InvoiceView
+        },
+
+        // Add your other pages here...
+    ]
+});
+
+export default router;

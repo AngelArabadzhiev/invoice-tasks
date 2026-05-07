@@ -1,47 +1,53 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script setup lang="ts">
+import Sidebar from "@/components/Sidebar.vue";
+import 'primeicons/primeicons.css'
+import { RouterView } from 'vue-router';
+
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="app-layout">
+    <Sidebar />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <main class="main-content">
+      <RouterView/>
+    </main>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style>
+
+
+
+/* 1. The Wrapper */
+.app-layout {
+  display: flex;
+  min-height: 100vh; /* Ensures the layout stretches to the bottom of the screen */
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+/* 2. The Main Content Area */
+.main-content {
+  flex: 1; /* This tells the main area to expand and fill all remaining space */
+  background-color: #121212;
+  color: white; /* Added so text is visible on dark background */
+  padding: 2rem;
+}
+
+/* Base body styles usually belong in a global CSS file, but they work here if this is App.vue */
+body {
+  margin: 0; /* Reset default browser margins */
+  background-color: #242424;
+}
+
+header {
+  line-height: 1.5;
 }
 
 @media (min-width: 1024px) {
   header {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
     place-items: flex-start;
-    flex-wrap: wrap;
   }
 }
 </style>
