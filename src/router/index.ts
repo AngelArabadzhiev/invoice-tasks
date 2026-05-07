@@ -14,7 +14,6 @@ const router = createRouter({
             component: InvoiceView
         },
 
-        // Add your other pages here...
     ]
 });
 

@@ -5,13 +5,14 @@ interface NavItem {
   id: string;
   label: string;
   iconClass: string;
+  path: string;
 }
 
 const navigation = ref<NavItem[]>([
-  { id: 'dashboard', label: 'Dashboard', iconClass: 'pi pi-objects-column' },
-  { id: 'invoices', label: 'Invoices', iconClass: 'pi pi-file' },
-  { id: 'clients', label: 'Clients', iconClass: 'pi pi-users' },
-  { id: 'settings', label: 'Settings', iconClass: 'pi pi-cog' },
+  { id: 'dashboard', label: 'Dashboard', iconClass: 'pi pi-objects-column', path: '' },
+  { id: 'invoices', label: 'Invoices', iconClass: 'pi pi-file', path: '' },
+  { id: 'clients', label: 'Clients', iconClass: 'pi pi-users', path: '' },
+  { id: 'settings', label: 'Settings', iconClass: 'pi pi-cog', path: '' },
 ]);
 
 const activeItemId = ref('invoices');
