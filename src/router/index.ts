@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import InvoiceView from "../views/InvoiceView.vue";
+import DashboardView from "../views/DashboardView.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,8 +12,13 @@ const router = createRouter({
         {
             path: '/dashboard',
             name: 'dashboard',
-            component: InvoiceView
+            component: DashboardView
         },
+        {
+            path: '/invoices',
+            name: 'invoices',
+            component: InvoiceView
+        }
 
     ]
 });

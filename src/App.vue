@@ -26,14 +26,12 @@ import { RouterView } from 'vue-router';
 
 .main-content {
   flex: 1;
-  background-color: #121212;
   color: white;
-  padding: 2rem;
 }
 
 body {
   margin: 0;
-  background-color: #242424;
+  background-color: white;
 }
 
 header {

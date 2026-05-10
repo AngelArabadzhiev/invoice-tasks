@@ -9,8 +9,8 @@ interface NavItem {
 }
 
 const navigation = ref<NavItem[]>([
-  { id: 'dashboard', label: 'Dashboard', iconClass: 'pi pi-objects-column', path: '' },
-  { id: 'invoices', label: 'Invoices', iconClass: 'pi pi-file', path: '' },
+  { id: 'dashboard', label: 'Dashboard', iconClass: 'pi pi-objects-column', path: '/dashboard' },
+  { id: 'invoices', label: 'Invoices', iconClass: 'pi pi-file', path: '/invoices' },
   { id: 'clients', label: 'Clients', iconClass: 'pi pi-users', path: '' },
   { id: 'settings', label: 'Settings', iconClass: 'pi pi-cog', path: '' },
 ]);
@@ -19,6 +19,7 @@ const activeItemId = ref('invoices');
 
 function setActiveItem(id: string) {
   activeItemId.value = id;
+
 }
 </script>
 
@@ -46,10 +47,10 @@ function setActiveItem(id: string) {
             :class="{ 'active': item.id === activeItemId }"
             @click="setActiveItem(item.id)"
         >
-          <a href="#" class="nav-link">
+          <RouterLink :to="item.path" class="nav-link">
             <i :class="[item.iconClass, 'nav-icon']"></i>
             <span class="nav-label">{{ item.label }}</span>
-          </a>
+          </RouterLink>
 
           <div v-if="item.id === activeItemId" class="active-indicator"></div>
         </li>

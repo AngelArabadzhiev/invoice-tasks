@@ -18,13 +18,13 @@ export interface Invoice {
     total: number;
 }
 
-enum PaymentMethod {
+export enum PaymentMethod {
     CARD,
     CASH,
     BANK_TRANSFER
 }
 
-enum InvoiceStatus {
+export enum InvoiceStatus {
     DRAFT,
     PENDING,
     PAID
