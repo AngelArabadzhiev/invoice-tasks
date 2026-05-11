@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="abbb14a0-0f85-41e7-858c-894b29fc10b8" name="Changes" comment="Enhance invoice management and improve navigation structure&#10;&#10;- Exported `PaymentMethod` and `InvoiceStatus` enums in `Invoice.ts`.&#10;- Updated `Sidebar` navigation items with correct `path` properties for routing.&#10;- Replaced anchor tags in `Sidebar` with `RouterLink` components for better navigation handling.&#10;- Expanded `InvoiceView` with a detailed invoice table and styled the page layout.&#10;- Added `DashboardView` as a new placeholder view.&#10;- Integrated `DashboardView` and `/invoices` routes into the router.&#10;- Cleaned up unnecessary comments and adjusted base styles." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="43" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Composition API Component" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/FrontEnd" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AngelArabadzhiev&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AngelArabadzhiev/invoice-tasks.git&quot;,
+    &quot;accountId&quot;: &quot;853b7aff-8cef-427b-b61c-0317c322c136&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/@vue/runtime-core/dist/runtime-core.d.ts" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000000000000002" />
+      <entry key="MS500" value="1.0006660878099998" />
+      <entry key="S2" value="1.1606507921938902" />
+      <entry key="S5" value="1.4812706609063189" />
+      <entry key="S10" value="1.7000447254483508" />
+      <entry key="S30" value="2.070287236188059" />
+      <entry key="S60" value="2.371045899221607" />
+      <entry key="M2" value="2.6258626655174178" />
+      <entry key="M5" value="2.836080144801433" />
+      <entry key="M10" value="3.050290025228153" />
+      <entry key="M15" value="3.455051908760227" />
+      <entry key="M30" value="5.269501086108942" />
+      <entry key="H1" value="8.419115199973266" />
+      <entry key="H2" value="11.622186666181733" />
+      <entry key="H4" value="13.959297620799383" />
+      <entry key="D1" value="16.4355263114446" />
+      <entry key="W1" value="16.917815786201622" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="1.676254685038131E-183" />
+      <entry key="S10" value="4.094208940733401E-92" />
+      <entry key="S30" value="3.4465929932714185E-31" />
+      <entry key="S60" value="5.870769109129928E-16" />
+      <entry key="M2" value="2.422967102557221E-8" />
+      <entry key="M5" value="9.017667764346527E-4" />
+      <entry key="M10" value="0.034296929481747444" />
+      <entry key="M15" value="0.14687685936681516" />
+      <entry key="M30" value="0.9024392969700283" />
+      <entry key="H1" value="2.590936912485168" />
+      <entry key="H2" value="4.518689971176311" />
+      <entry key="H4" value="6.002330791089915" />
+      <entry key="D1" value="7.624303830863253" />
+      <entry key="W1" value="7.9451755167333395" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.2038973443526064E-4" />
+      <entry key="MS500" value="0.1649965087064047" />
+      <entry key="S2" value="0.787460277042306" />
+      <entry key="S5" value="1.3038664207208275" />
+      <entry key="S10" value="1.6039534325535443" />
+      <entry key="S30" value="2.0275389887058757" />
+      <entry key="S60" value="2.343127915658416" />
+      <entry key="M2" value="2.608912061978741" />
+      <entry key="M5" value="2.82918961955738" />
+      <entry key="M10" value="3.0802716508422576" />
+      <entry key="M15" value="3.5985778344789456" />
+      <entry key="M30" value="6.169182553384681" />
+      <entry key="H1" value="11.007702788622257" />
+      <entry key="H2" value="16.139198571706018" />
+      <entry key="H4" value="19.960603790815345" />
+      <entry key="D1" value="24.059626383051178" />
+      <entry key="W1" value="24.86296127345848" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3DOcj43u9uF5NMDwT5pAc4sj18Q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/angel/invoice-tasks/FrontEnd",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/home/angel/.cache/JetBrains/RemoteDev/dist/91d1d3b13b117_WebStorm-261.24374.30/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm dev">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:5173">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm dev" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f4ee427fc208-JavaScript-WS-262.4852.53" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="abbb14a0-0f85-41e7-858c-894b29fc10b8" name="Changes" comment="" />
+      <created>1778156689159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778156689159</updated>
+      <workItem from="1778156690149" duration="7866000" />
+      <workItem from="1778222721386" duration="3277000" />
+      <workItem from="1778426676355" duration="2909000" />
+      <workItem from="1778479807450" duration="3319000" />
+      <workItem from="1778493570574" duration="2108000" />
+      <workItem from="1778513210597" duration="3771000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1778156769616</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778156769617</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add TypeScript interfaces for Invoice, Client, and Service models">
+      <option name="closed" value="true" />
+      <created>1778158942968</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778158942968</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implement initial layout and routing structure&#10;&#10;- Added `Sidebar` component with sample navigation items.&#10;- Created `InvoiceView` as a placeholder for the invoices page.&#10;- Configured Vue Router with basic routes (dashboard redirect and invoice view).&#10;- Removed dark mode related CSS and optimized base styles.&#10;- Updated `App.vue` to integrate `Sidebar` and routing structure.">
+      <option name="closed" value="true" />
+      <created>1778171493408</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778171493408</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Remove example components and scaffolding; introduce invoice-related components and views&#10;&#10;- Deleted default example components (`HelloWorld.vue`, `TheWelcome.vue`, `WelcomeItem.vue`).  &#10;- Added placeholders for invoice-related components: `InvoiceForm`, `InvoicePreview`, `InvoiceTemplateOne`, `InvoiceTemplateTwo`, `InvoiceDelete`.  &#10;- Created invoice-related views: `InvoiceEdit`, `InvoiceCreate`.  &#10;- Updated `Sidebar` to include `path` property for navigation items.">
+      <option name="closed" value="true" />
+      <created>1778172134302</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778172134302</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Enhance invoice management and improve navigation structure&#10;&#10;- Exported `PaymentMethod` and `InvoiceStatus` enums in `Invoice.ts`.&#10;- Updated `Sidebar` navigation items with correct `path` properties for routing.&#10;- Replaced anchor tags in `Sidebar` with `RouterLink` components for better navigation handling.&#10;- Expanded `InvoiceView` with a detailed invoice table and styled the page layout.&#10;- Added `DashboardView` as a new placeholder view.&#10;- Integrated `DashboardView` and `/invoices` routes into the router.&#10;- Cleaned up unnecessary comments and adjusted base styles.">
+      <option name="closed" value="true" />
+      <created>1778427681590</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778427681590</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Enhance invoice management and improve navigation structure&#10;&#10;- Exported `PaymentMethod` and `InvoiceStatus` enums in `Invoice.ts`.&#10;- Updated `Sidebar` navigation items with correct `path` properties for routing.&#10;- Replaced anchor tags in `Sidebar` with `RouterLink` components for better navigation handling.&#10;- Expanded `InvoiceView` with a detailed invoice table and styled the page layout.&#10;- Added `DashboardView` as a new placeholder view.&#10;- Integrated `DashboardView` and `/invoices` routes into the router.&#10;- Cleaned up unnecessary comments and adjusted base styles.">
+      <option name="closed" value="true" />
+      <created>1778521128752</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778521128752</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Add TypeScript interfaces for Invoice, Client, and Service models" />
+    <MESSAGE value="Implement initial layout and routing structure&#10;&#10;- Added `Sidebar` component with sample navigation items.&#10;- Created `InvoiceView` as a placeholder for the invoices page.&#10;- Configured Vue Router with basic routes (dashboard redirect and invoice view).&#10;- Removed dark mode related CSS and optimized base styles.&#10;- Updated `App.vue` to integrate `Sidebar` and routing structure." />
+    <MESSAGE value="Remove example components and scaffolding; introduce invoice-related components and views&#10;&#10;- Deleted default example components (`HelloWorld.vue`, `TheWelcome.vue`, `WelcomeItem.vue`).  &#10;- Added placeholders for invoice-related components: `InvoiceForm`, `InvoicePreview`, `InvoiceTemplateOne`, `InvoiceTemplateTwo`, `InvoiceDelete`.  &#10;- Created invoice-related views: `InvoiceEdit`, `InvoiceCreate`.  &#10;- Updated `Sidebar` to include `path` property for navigation items." />
+    <MESSAGE value="Enhance invoice management and improve navigation structure&#10;&#10;- Exported `PaymentMethod` and `InvoiceStatus` enums in `Invoice.ts`.&#10;- Updated `Sidebar` navigation items with correct `path` properties for routing.&#10;- Replaced anchor tags in `Sidebar` with `RouterLink` components for better navigation handling.&#10;- Expanded `InvoiceView` with a detailed invoice table and styled the page layout.&#10;- Added `DashboardView` as a new placeholder view.&#10;- Integrated `DashboardView` and `/invoices` routes into the router.&#10;- Cleaned up unnecessary comments and adjusted base styles." />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance invoice management and improve navigation structure&#10;&#10;- Exported `PaymentMethod` and `InvoiceStatus` enums in `Invoice.ts`.&#10;- Updated `Sidebar` navigation items with correct `path` properties for routing.&#10;- Replaced anchor tags in `Sidebar` with `RouterLink` components for better navigation handling.&#10;- Expanded `InvoiceView` with a detailed invoice table and styled the page layout.&#10;- Added `DashboardView` as a new placeholder view.&#10;- Integrated `DashboardView` and `/invoices` routes into the router.&#10;- Cleaned up unnecessary comments and adjusted base styles." />
+  </component>
+</project>

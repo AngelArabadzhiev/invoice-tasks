@@ -1,0 +1,386 @@
+
+> invoice-tasks@0.0.0 dev
+> vite --port 3000 --host
+
+
+  VITE v8.0.11  ready in 508 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.0.114:3000/
+  ➜  Vue DevTools: Open http://localhost:3000/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+node:events:497
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at errorOrDestroy (node:internal/streams/destroy:239:7)
+    at node:internal/fs/streams:275:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:670:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+Node.js v22.22.1
+
+Could not open App.vue in the editor.
+The editor process exited with an error: (code 1).
+
+9:13:22 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:13:27 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:14:07 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:14:18 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:17:19 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:17:19 AM [vite] Internal server error: Invalid end tag.
+  Plugin: vite-plugin-vue-inspector
+  File: /home/angel/invoice-tasks/src/views/InvoiceView.vue
+      at createCompilerError (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3014:5)
+      at Object.onclosetag (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2391:9)
+      at Tokenizer.stateInClosingTagName (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:799:16)
+      at Tokenizer.parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1157:16)
+      at Object.baseParse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3053:13)
+      at parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:910:23)
+      at result (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:29:21)
+      at new Promise (<anonymous>)
+      at compileSFCTemplate (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:26:24)
+9:18:46 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:18:46 AM [vite] (client) page reload src/router/index.ts
+9:19:14 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:21:20 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:21:20 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:22:01 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:22:08 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:23:05 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:23:05 AM [vite] Internal server error: Error parsing JavaScript expression: Unexpected token (1:13)
+  Plugin: vite:vue
+  File: /home/angel/invoice-tasks/src/views/InvoicePreview.vue:10:62
+  13 |  <style scoped>
+  14 |  
+  15 |  </style>
+     |       ^
+      at createCompilerError (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3014:5)
+      at createExp (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3007:7)
+      at Object.oninterpolation (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2351:16)
+      at Tokenizer.stateInterpolationClose (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:596:18)
+      at Tokenizer.parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1097:16)
+      at Object.baseParse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3053:13)
+      at Object.parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:910:23)
+      at Object.parse$1 [as parse] (/home/angel/invoice-tasks/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1824:24)
+      at createDescriptor (file:///home/angel/invoice-tasks/node_modules/@vitejs/plugin-vue/dist/index.mjs:50:42)
+9:28:57 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:28:58 AM [vite] Internal server error: Error parsing JavaScript expression: Unexpected token (1:13)
+  Plugin: vite:vue
+  File: /home/angel/invoice-tasks/src/views/InvoicePreview.vue:10:62
+  13 |  <style scoped>
+  14 |  
+  15 |  </style>
+     |       ^
+      at createCompilerError (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at emitError (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3014:5)
+      at createExp (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3007:7)
+      at Object.oninterpolation (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:2351:16)
+      at Tokenizer.stateInterpolationClose (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:596:18)
+      at Tokenizer.parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1097:16)
+      at Object.baseParse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3053:13)
+      at Object.parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:910:23)
+      at Object.parse$1 [as parse] (/home/angel/invoice-tasks/node_modules/@vue/compiler-sfc/dist/compiler-sfc.cjs.js:1824:24)
+      at createDescriptor (file:///home/angel/invoice-tasks/node_modules/@vitejs/plugin-vue/dist/index.mjs:50:42)
+9:29:15 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:29:34 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:31:42 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:34:13 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:34:36 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:35:03 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:39:06 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:39:10 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:39:15 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:39:26 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:39:38 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:39:41 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:40:04 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:40:05 AM [vite] Internal server error: Unquoted attribute value cannot contain U+0022 ("), U+0027 ('), U+003C (<), U+003D (=), and U+0060 (`).
+  Plugin: vite-plugin-vue-inspector
+  File: /home/angel/invoice-tasks/src/views/InvoiceView.vue
+      at createCompilerError (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at Object.emitError [as onerr] (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3014:5)
+      at Tokenizer.stateInAttrValueNoQuotes (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:982:16)
+      at Tokenizer.stateBeforeAttrValue (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:952:12)
+      at Tokenizer.parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1173:16)
+      at Object.baseParse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3053:13)
+      at parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:910:23)
+      at result (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:29:21)
+      at new Promise (<anonymous>)
+      at compileSFCTemplate (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:26:24)
+9:40:22 AM [vite] (client) page reload src/router/index.ts
+9:40:24 AM [vite] (client) Pre-transform error: Unquoted attribute value cannot contain U+0022 ("), U+0027 ('), U+003C (<), U+003D (=), and U+0060 (`).
+  Plugin: vite-plugin-vue-inspector
+  File: /home/angel/invoice-tasks/src/views/InvoiceView.vue
+9:40:24 AM [vite] Internal server error: Unquoted attribute value cannot contain U+0022 ("), U+0027 ('), U+003C (<), U+003D (=), and U+0060 (`).
+  Plugin: vite-plugin-vue-inspector
+  File: /home/angel/invoice-tasks/src/views/InvoiceView.vue
+      at createCompilerError (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at Object.emitError [as onerr] (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3014:5)
+      at Tokenizer.stateInAttrValueNoQuotes (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:982:16)
+      at Tokenizer.stateBeforeAttrValue (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:952:12)
+      at Tokenizer.parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1173:16)
+      at Object.baseParse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3053:13)
+      at parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:910:23)
+      at result (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:29:21)
+      at new Promise (<anonymous>)
+      at compileSFCTemplate (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:26:24)
+9:40:34 AM [vite] (client) page reload src/router/index.ts
+9:40:35 AM [vite] (client) Pre-transform error: Unquoted attribute value cannot contain U+0022 ("), U+0027 ('), U+003C (<), U+003D (=), and U+0060 (`).
+  Plugin: vite-plugin-vue-inspector
+  File: /home/angel/invoice-tasks/src/views/InvoiceView.vue
+9:40:36 AM [vite] Internal server error: Unquoted attribute value cannot contain U+0022 ("), U+0027 ('), U+003C (<), U+003D (=), and U+0060 (`).
+  Plugin: vite-plugin-vue-inspector
+  File: /home/angel/invoice-tasks/src/views/InvoiceView.vue
+      at createCompilerError (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at Object.emitError [as onerr] (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3014:5)
+      at Tokenizer.stateInAttrValueNoQuotes (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:982:16)
+      at Tokenizer.stateBeforeAttrValue (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:952:12)
+      at Tokenizer.parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1173:16)
+      at Object.baseParse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3053:13)
+      at parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:910:23)
+      at result (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:29:21)
+      at new Promise (<anonymous>)
+      at compileSFCTemplate (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:26:24)
+9:40:38 AM [vite] (client) page reload src/router/index.ts
+9:40:39 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] Error:[0m Expected `,` or `}` but found `Identifier`
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/router/index.ts:26:37 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m23 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m{
+ [38;5;240m   │[0m         ┬  
+ [38;5;240m   │[0m         ╰── Opened here
+ [38;5;240m   │[0m 
+ [38;5;246m26 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249m:[0m[38;5;249m [0m[38;5;249mI[0m[38;5;249mn[0m[38;5;249mv[0m[38;5;249mo[0m[38;5;249mi[0m[38;5;249mc[0m[38;5;249me[0m[38;5;249mP[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mv[0m[38;5;249m [0m[38;5;249m [0miew
+ [38;5;240m   │[0m                                     ─┬─  
+ [38;5;240m   │[0m                                      ╰─── `,` or `}` expected
+[38;5;246m────╯[0m
+
+  Plugin: vite:oxc
+  File: /home/angel/invoice-tasks/src/router/index.ts
+9:40:39 AM [vite] Internal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] Error:[0m Expected `,` or `}` but found `Identifier`
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/router/index.ts:26:37 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m23 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m{
+ [38;5;240m   │[0m         ┬  
+ [38;5;240m   │[0m         ╰── Opened here
+ [38;5;240m   │[0m 
+ [38;5;246m26 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249m:[0m[38;5;249m [0m[38;5;249mI[0m[38;5;249mn[0m[38;5;249mv[0m[38;5;249mo[0m[38;5;249mi[0m[38;5;249mc[0m[38;5;249me[0m[38;5;249mP[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mv[0m[38;5;249m [0m[38;5;249m [0miew
+ [38;5;240m   │[0m                                     ─┬─  
+ [38;5;240m   │[0m                                      ╰─── `,` or `}` expected
+[38;5;246m────╯[0m
+
+  Plugin: vite:oxc
+  File: /home/angel/invoice-tasks/src/router/index.ts
+      at transformWithOxc (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:3340:19)
+      at TransformPluginContext.transform (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:3408:26)
+      at file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-devtools/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:26
+      at plugin.<computed> (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-devtools/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:387:14)
+      at EnvironmentPluginContainer.transform (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:30179:51)
+      at async loadAndTransform (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:24509:26)
+      at async viteTransformMiddleware (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:24303:20)
+9:40:43 AM [vite] (client) page reload src/router/index.ts
+9:40:45 AM [vite] (client) Pre-transform error: Unquoted attribute value cannot contain U+0022 ("), U+0027 ('), U+003C (<), U+003D (=), and U+0060 (`).
+  Plugin: vite-plugin-vue-inspector
+  File: /home/angel/invoice-tasks/src/views/InvoiceView.vue
+9:40:46 AM [vite] Internal server error: Unquoted attribute value cannot contain U+0022 ("), U+0027 ('), U+003C (<), U+003D (=), and U+0060 (`).
+  Plugin: vite-plugin-vue-inspector
+  File: /home/angel/invoice-tasks/src/views/InvoiceView.vue
+      at createCompilerError (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at Object.emitError [as onerr] (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3014:5)
+      at Tokenizer.stateInAttrValueNoQuotes (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:982:16)
+      at Tokenizer.stateBeforeAttrValue (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:952:12)
+      at Tokenizer.parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1173:16)
+      at Object.baseParse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3053:13)
+      at parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:910:23)
+      at result (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:29:21)
+      at new Promise (<anonymous>)
+      at compileSFCTemplate (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:26:24)
+9:40:53 AM [vite] (client) page reload src/router/index.ts
+9:40:54 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] Error:[0m Unexpected token
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/router/index.ts:27:9 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m27 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m}
+ [38;5;240m   │[0m         ┬  
+ [38;5;240m   │[0m         ╰── 
+[38;5;246m────╯[0m
+
+  Plugin: vite:oxc
+  File: /home/angel/invoice-tasks/src/router/index.ts
+9:40:54 AM [vite] Internal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] Error:[0m Unexpected token
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/router/index.ts:27:9 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m27 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m}
+ [38;5;240m   │[0m         ┬  
+ [38;5;240m   │[0m         ╰── 
+[38;5;246m────╯[0m
+
+  Plugin: vite:oxc
+  File: /home/angel/invoice-tasks/src/router/index.ts
+      at transformWithOxc (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:3340:19)
+      at TransformPluginContext.transform (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:3408:26)
+      at file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-devtools/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:26
+      at plugin.<computed> (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-devtools/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:387:14)
+      at EnvironmentPluginContainer.transform (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:30179:51)
+      at async loadAndTransform (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:24509:26)
+      at async viteTransformMiddleware (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:24303:20)
+9:40:58 AM [vite] (client) page reload src/router/index.ts
+9:40:59 AM [vite] (client) Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] Error:[0m import() requires a specifier.
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/router/index.ts:26:30 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m26 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249m:[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m[38;5;249m [0mimport()
+ [38;5;240m   │[0m                              ────┬───  
+ [38;5;240m   │[0m                                  ╰───── 
+[38;5;246m────╯[0m
+
+  Plugin: vite:oxc
+  File: /home/angel/invoice-tasks/src/router/index.ts
+9:41:00 AM [vite] Internal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] Error:[0m import() requires a specifier.
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/router/index.ts:26:30 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m26 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249m:[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m[38;5;249m [0mimport()
+ [38;5;240m   │[0m                              ────┬───  
+ [38;5;240m   │[0m                                  ╰───── 
+[38;5;246m────╯[0m
+
+  Plugin: vite:oxc
+  File: /home/angel/invoice-tasks/src/router/index.ts
+      at transformWithOxc (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:3340:19)
+      at TransformPluginContext.transform (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:3408:26)
+      at file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-devtools/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:403:26
+      at plugin.<computed> (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-devtools/node_modules/vite-plugin-inspect/dist/shared/vite-plugin-inspect.BzUKaD4x.mjs:387:14)
+      at EnvironmentPluginContainer.transform (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:30179:51)
+      at async loadAndTransform (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:24509:26)
+      at async viteTransformMiddleware (file:///home/angel/invoice-tasks/node_modules/vite/dist/node/chunks/node.js:24303:20)
+9:41:05 AM [vite] (client) page reload src/router/index.ts
+9:41:06 AM [vite] (client) Pre-transform error: Unquoted attribute value cannot contain U+0022 ("), U+0027 ('), U+003C (<), U+003D (=), and U+0060 (`).
+  Plugin: vite-plugin-vue-inspector
+  File: /home/angel/invoice-tasks/src/views/InvoiceView.vue
+9:41:06 AM [vite] Internal server error: Unquoted attribute value cannot contain U+0022 ("), U+0027 ('), U+003C (<), U+003D (=), and U+0060 (`).
+  Plugin: vite-plugin-vue-inspector
+  File: /home/angel/invoice-tasks/src/views/InvoiceView.vue
+      at createCompilerError (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1378:17)
+      at Object.emitError [as onerr] (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3014:5)
+      at Tokenizer.stateInAttrValueNoQuotes (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:982:16)
+      at Tokenizer.stateBeforeAttrValue (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:952:12)
+      at Tokenizer.parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:1173:16)
+      at Object.baseParse (/home/angel/invoice-tasks/node_modules/@vue/compiler-core/dist/compiler-core.cjs.js:3053:13)
+      at parse (/home/angel/invoice-tasks/node_modules/@vue/compiler-dom/dist/compiler-dom.cjs.js:910:23)
+      at result (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:29:21)
+      at new Promise (<anonymous>)
+      at compileSFCTemplate (file:///home/angel/invoice-tasks/node_modules/vite-plugin-vue-inspector/dist/index.mjs:26:24)
+9:42:46 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:43:37 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:44:09 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:44:45 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:45:42 AM [vite] (client) page reload src/router/index.ts
+9:46:50 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:47:54 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:48:01 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:48:14 AM [vite] (client) hmr update /src/views/InvoicePreview.vue, /src/views/InvoicePreview.vue?vue&type=style&index=0&scoped=a77c833a&lang.css
+9:50:36 AM [vite] (client) hmr update /src/views/InvoicePreview.vue
+9:51:55 AM [vite] (client) hmr update /src/views/InvoicePreview.vue, /src/views/InvoicePreview.vue?vue&type=style&index=0&scoped=a77c833a&lang.css
+9:57:00 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+9:58:05 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+10:00:46 AM [vite] (client) hmr update /src/views/InvoiceView.vue
+
+> invoice-tasks@0.0.0 dev
+> vite --port 3000 --host
+
+
+  VITE v8.0.11  ready in 432 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.0.114:3000/
+  ➜  Vue DevTools: Open http://localhost:3000/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+
+> invoice-tasks@0.0.0 dev
+> vite --port 3000 --host
+
+
+  VITE v8.0.11  ready in 437 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.0.114:3000/
+  ➜  Vue DevTools: Open http://localhost:3000/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+1:07:34 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:10:06 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:10:33 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:12:47 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:12:53 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:13:06 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:13:21 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:13:25 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:14:06 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:14:20 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:14:37 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:15:55 PM [vite] (client) hmr update /src/views/InvoicePreview.vue
+1:16:26 PM [vite] (client) hmr update /src/views/InvoicePreview.vue
+1:17:32 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:17:45 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+1:19:52 PM [vite] (client) hmr update /src/components/Sidebar.vue?vue&type=style&index=0&scoped=6dec5f19&lang.css
+1:20:00 PM [vite] (client) hmr update /src/components/Sidebar.vue?vue&type=style&index=0&scoped=6dec5f19&lang.css
+1:20:02 PM [vite] (client) hmr update /src/components/Sidebar.vue?vue&type=style&index=0&scoped=6dec5f19&lang.css
+1:20:21 PM [vite] (client) hmr update /src/components/Sidebar.vue?vue&type=style&index=0&scoped=6dec5f19&lang.css
+1:20:31 PM [vite] (client) hmr update /src/components/Sidebar.vue?vue&type=style&index=0&scoped=6dec5f19&lang.css
+1:21:46 PM [vite] (client) hmr update /src/views/DashboardView.vue
+1:21:50 PM [vite] (client) hmr update /src/views/DashboardView.vue?vue&type=style&index=0&scoped=336c5134&lang.css
+1:23:47 PM [vite] (client) hmr update /src/views/InvoicePreview.vue
+1:23:47 PM [vite] (client) hmr update /src/views/DashboardView.vue?vue&type=style&index=0&scoped=336c5134&lang.css
+
+> invoice-tasks@0.0.0 dev
+> vite --port 3000 --host
+
+
+  VITE v8.0.11  ready in 496 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.0.114:3000/
+  ➜  Vue DevTools: Open http://localhost:3000/__devtools__/ as a separate window
+  ➜  Vue DevTools: Press Alt(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
+6:33:00 PM [vite] (client) hmr update /src/components/Sidebar.vue?vue&type=style&index=0&scoped=6dec5f19&lang.css
+6:33:00 PM [vite] (client) hmr update /src/views/InvoicePreview.vue, /src/views/InvoicePreview.vue?vue&type=style&index=0&scoped=a77c833a&lang.css
+6:42:39 PM [vite] (client) hmr update /src/views/InvoiceView.vue
+6:42:39 PM [vite] (client) page reload src/router/index.ts
+7:29:35 PM [vite] (client) hmr update /src/views/InvoiceView.vue?vue&type=style&index=0&scoped=bb8097f1&lang.css
+8:38:38 PM [vite] (client) hmr update /src/views/InvoiceCreate.vue, /src/views/InvoiceCreate.vue?vue&type=style&index=0&scoped=0b0a5ac7&lang.css
+8:38:38 PM [vite] (client) hmr update /src/views/InvoiceView.vue, /src/views/InvoiceView.vue?vue&type=style&index=0&scoped=bb8097f1&lang.css
+8:38:38 PM [vite] (client) page reload src/router/index.ts
+8:39:36 PM [vite] (client) page reload FrontEnd/index.html
+8:39:36 PM [vite] (client) hmr update /src/App.vue, /src/App.vue?vue&type=style&index=0&lang.css
+8:39:36 PM [vite] (client) page reload src/main.js
+8:39:36 PM [vite] (client) hmr update /src/assets/main.css
+8:39:36 PM [vite] (client) hmr update /src/assets/main.css
+8:39:36 PM [vite] (client) hmr update /src/components/InvoicePreview.vue, /src/components/InvoicePreview.vue?vue&type=style&index=0&scoped=f5a2e894&lang.css
+8:39:36 PM [vite] (client) hmr update /src/components/Sidebar.vue, /src/components/Sidebar.vue?vue&type=style&index=0&scoped=6dec5f19&lang.css
+8:39:36 PM [vite] (client) page reload src/router/index.ts
+8:39:36 PM [vite] (client) page reload src/types/Invoice.ts
+8:39:36 PM [vite] (client) hmr update /src/views/DashboardView.vue, /src/views/DashboardView.vue?vue&type=style&index=0&scoped=336c5134&lang.css
+8:39:36 PM [vite] (client) hmr update /src/views/InvoiceCreate.vue, /src/views/InvoiceCreate.vue?vue&type=style&index=0&scoped=0b0a5ac7&lang.css
+8:39:36 PM [vite] (client) hmr update /src/views/InvoicePreview.vue, /src/views/InvoicePreview.vue?vue&type=style&index=0&scoped=a77c833a&lang.css
+8:39:36 PM [vite] (client) hmr update /src/views/InvoiceView.vue, /src/views/InvoiceView.vue?vue&type=style&index=0&scoped=bb8097f1&lang.css
+8:39:36 PM [vite] (client) page reload src/composables/useInvoiceHelpers.ts
+8:39:36 PM [vite] (client) page reload index.html
+8:39:36 PM [vite] vite.config.js changed, restarting server...
+8:39:36 PM [vite] server restarted.
