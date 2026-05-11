@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import {Invoice, InvoiceStatus, PaymentMethod} from "@/types/Invoice";
-import {Client} from "@/types/Client";
-import {Service} from "@/types/Service";
+import { ref, onMounted, onActivated } from 'vue';
+import { Invoice, InvoiceStatus, PaymentMethod } from "@/types/Invoice";
+import { Client } from "@/types/Client";
+import { Service } from "@/types/Service";
 
-
-const invoices = ref<Invoice[]>([
+const SEED: Invoice[] = [
   {
     id: 1,
     invoiceNumber: 2023001,
@@ -14,7 +13,7 @@ const invoices = ref<Invoice[]>([
     status: InvoiceStatus.PAID,
     template: 'Standard',
     paymentMethod: PaymentMethod.BANK_TRANSFER,
-    currency: 'BGN',
+    currency: 'EUR',
     vatRate: 20,
     client: { id: 101, name: 'ТехноЛогик ООД', email: 'contact@technologic.bg', phone: '0888123456', address: 'гр. София' } as Client,
     services: [{ id: 1, name: 'Уеб разработка', description: 'Изработка на сайт', quantity: 1, unitPrice: 1041.67 }] as Service[],
@@ -30,10 +29,10 @@ const invoices = ref<Invoice[]>([
     status: InvoiceStatus.PENDING,
     template: 'Standard',
     paymentMethod: PaymentMethod.BANK_TRANSFER,
-    currency: 'BGN',
+    currency: 'EUR',
     vatRate: 20,
-    client: { id: 102, name: 'Алфа Груп АД', email: 'office@alphagroup.bg', phone: '0888654321', address: 'гр. Пловдив' },
-    services: [{ id: 2, name: 'Консултантски услуги', description: 'ИТ Одит', quantity: 40, unitPrice: 70.83 }],
+    client: { id: 102, name: 'Алфа Груп АД', email: 'office@alphagroup.bg', phone: '0888654321', address: 'гр. Пловдив' } as Client,
+    services: [{ id: 2, name: 'Консултантски услуги', description: 'ИТ Одит', quantity: 40, unitPrice: 70.83 }] as Service[],
     subtotal: 2833.33,
     vatAmount: 566.67,
     total: 3400.00
@@ -46,40 +45,59 @@ const invoices = ref<Invoice[]>([
     status: InvoiceStatus.DRAFT,
     template: 'Standard',
     paymentMethod: PaymentMethod.CARD,
-    currency: 'BGN',
+    currency: 'EUR',
     vatRate: 20,
-    client: { id: 103, name: 'Уеб Дизайн Студио', email: 'hello@webdesign.bg', phone: '0899112233', address: 'гр. Варна' },
-    services: [{ id: 3, name: 'Дизайн лого', description: 'Векторно лого', quantity: 1, unitPrice: 708.33 }],
+    client: { id: 103, name: 'Уеб Дизайн Студио', email: 'hello@webdesign.bg', phone: '0899112233', address: 'гр. Варна' } as Client,
+    services: [{ id: 3, name: 'Дизайн лого', description: 'Векторно лого', quantity: 1, unitPrice: 708.33 }] as Service[],
     subtotal: 708.33,
     vatAmount: 141.67,
     total: 850.00
   }
-]);
+];
 
-// 4. Helper functions to translate data for the UI
-const getStatusLabel = (status: InvoiceStatus) => {
+const invoices = ref<Invoice[]>([]);
+
+const loadInvoices = () => {
+  const stored = localStorage.getItem('invoices');
+  if (stored) {
+    invoices.value = JSON.parse(stored);
+  } else {
+    invoices.value = SEED;
+    localStorage.setItem('invoices', JSON.stringify(SEED));
+  }
+};
+
+onMounted(loadInvoices);
+onActivated(loadInvoices);
+
+const getStatusLabel = (status: InvoiceStatus): string => {
   switch (status) {
-    case InvoiceStatus.PAID: return 'Платена';
+    case InvoiceStatus.PAID:    return 'Платена';
     case InvoiceStatus.PENDING: return 'Издадена';
-    case InvoiceStatus.DRAFT: return 'Чернова';
-    default: return 'Неизвестен';
+    case InvoiceStatus.DRAFT:   return 'Чернова';
+    default:                    return 'Неизвестен';
   }
 };
 
-const getStatusClass = (status: InvoiceStatus) => {
+const getStatusClass = (status: InvoiceStatus): string => {
   switch (status) {
-    case InvoiceStatus.PAID: return 'status-paid';
+    case InvoiceStatus.PAID:    return 'status-paid';
     case InvoiceStatus.PENDING: return 'status-issued';
-    case InvoiceStatus.DRAFT: return 'status-draft';
-    default: return '';
+    case InvoiceStatus.DRAFT:   return 'status-draft';
+    default:                    return '';
   }
 };
 
-const formatCurrency = (amount: number, currency: string) => {
+const formatCurrency = (amount: number, currency: string): string => {
   return new Intl.NumberFormat('bg-BG', {
     style: 'currency',
-    currency: currency
+    currency
   }).format(amount);
+};
+
+const deleteInvoice = (id: number) => {
+  invoices.value = invoices.value.filter(inv => inv.id !== id);
+  localStorage.setItem('invoices', JSON.stringify(invoices.value));
 };
 </script>
 
@@ -90,10 +108,10 @@ const formatCurrency = (amount: number, currency: string) => {
         <h1>Фактури</h1>
         <p>Списък на всички фактури и тяхното състояние.</p>
       </div>
-      <button class="btn-primary">
+      <RouterLink to="/invoices/create" class="btn-primary">
         <i class="pi pi-plus"></i>
         Създай нова фактура
-      </button>
+      </RouterLink>
     </header>
 
     <div class="table-wrapper">
@@ -110,26 +128,30 @@ const formatCurrency = (amount: number, currency: string) => {
         </tr>
         </thead>
         <tbody>
+        <tr v-if="invoices.length === 0">
+          <td colspan="7" class="empty-row">Няма намерени фактури.</td>
+        </tr>
         <tr v-for="invoice in invoices" :key="invoice.id">
-          <td class="font-medium">INV-{{ invoice.invoiceNumber }}</td>
-
+          <td class="font-medium">{{ invoice.invoiceNumber }}</td>
           <td>{{ invoice.client.name }}</td>
-
           <td>{{ invoice.issueDate }}</td>
           <td>{{ invoice.dueDate }}</td>
-
           <td class="font-medium">{{ formatCurrency(invoice.total, invoice.currency) }}</td>
-
           <td>
               <span :class="['status-badge', getStatusClass(invoice.status)]">
                 {{ getStatusLabel(invoice.status) }}
               </span>
           </td>
-
           <td class="actions-cell">
-            <button class="action-btn" title="Преглед"><i class="pi pi-eye"></i></button>
-            <button class="action-btn" title="Редакция"><i class="pi pi-pencil"></i></button>
-            <button class="action-btn" title="Изтриване"><i class="pi pi-trash"></i></button>
+            <RouterLink :to="`/invoice-preview/${invoice.id}`" class="action-btn" title="Преглед">
+              <i class="pi pi-eye"></i>
+            </RouterLink>
+            <button class="action-btn" title="Редакция">
+              <i class="pi pi-pencil"></i>
+            </button>
+            <button class="action-btn action-btn--danger" title="Изтриване" @click="deleteInvoice(invoice.id)">
+              <i class="pi pi-trash"></i>
+            </button>
           </td>
         </tr>
         </tbody>
@@ -137,7 +159,9 @@ const formatCurrency = (amount: number, currency: string) => {
     </div>
 
     <div class="pagination-footer">
-      <span class="pagination-info">Показани 1 до {{ invoices.length }} от {{ invoices.length }} записа</span>
+      <span class="pagination-info">
+        Показани {{ invoices.length }} записа
+      </span>
       <div class="pagination-controls">
         <button class="btn-page" disabled>Предишна</button>
         <button class="btn-page" disabled>Следваща</button>
@@ -179,6 +203,7 @@ const formatCurrency = (amount: number, currency: string) => {
   color: white;
   border: none;
   padding: 10px 20px;
+  text-decoration: none;
   border-radius: 6px;
   font-weight: 500;
   cursor: pointer;
@@ -187,21 +212,16 @@ const formatCurrency = (amount: number, currency: string) => {
   gap: 8px;
   transition: opacity 0.2s;
 }
+.btn-primary:hover { opacity: 0.9; }
 
-.btn-primary:hover {
-  opacity: 0.9;
-}
-
-/* Table Wrapper */
 .table-wrapper {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid #E5E7EB;
   border-radius: 8px;
-  overflow: hidden; /* Ensures the rounded corners apply to the table inside */
+  overflow: hidden;
   margin-bottom: 16px;
 }
 
-/* Table Styles */
 .data-table {
   width: 100%;
   border-collapse: collapse;
@@ -224,43 +244,36 @@ const formatCurrency = (amount: number, currency: string) => {
   color: #374151;
 }
 
-/* Remove bottom border from the last row */
-.data-table tbody tr:last-child td {
-  border-bottom: none;
-}
+.data-table tbody tr:last-child td { border-bottom: none; }
+
+.data-table tbody tr:hover { background-color: #F9FAFB; }
 
 .font-medium {
   font-weight: 500;
   color: #111827;
 }
 
+.empty-row {
+  text-align: center;
+  color: #9CA3AF;
+  padding: 48px 16px !important;
+  font-size: 0.9rem;
+}
+
 .status-badge {
   padding: 4px 12px;
-  border-radius: 9999px; /* Pill shape */
+  border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 600;
   display: inline-block;
 }
+.status-paid    { background-color: #DCFCE7; color: #166534; }
+.status-issued  { background-color: #DBEAFE; color: #1E40AF; }
+.status-draft   { background-color: #FEF3C7; color: #92400E; }
 
-.status-paid {
-  background-color: #DCFCE7;
-  color: #166534;
-}
-
-.status-issued {
-  background-color: #DBEAFE;
-  color: #1E40AF;
-}
-
-.status-draft {
-  background-color: #FEF3C7;
-  color: #92400E;
-}
-
-/* Action Buttons */
 .actions-cell {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
 }
 
@@ -270,15 +283,16 @@ const formatCurrency = (amount: number, currency: string) => {
   color: #6B7280;
   cursor: pointer;
   font-size: 1rem;
-  padding: 4px;
-  transition: color 0.2s;
+  padding: 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s, background 0.15s;
+  text-decoration: none;
 }
+.action-btn:hover { color: #111827; background: #F3F4F6; }
+.action-btn--danger:hover { color: #DC2626; background: #FEE2E2; }
 
-.action-btn:hover {
-  color: #111827;
-}
-
-/* Pagination Footer */
 .pagination-footer {
   display: flex;
   justify-content: space-between;
@@ -291,18 +305,15 @@ const formatCurrency = (amount: number, currency: string) => {
   color: #6B7280;
 }
 
-.pagination-controls {
-  display: flex;
-  gap: 8px;
-}
+.pagination-controls { display: flex; gap: 8px; }
 
 .btn-page {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid #E5E7EB;
   color: #9CA3AF;
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 0.85rem;
-  cursor: not-allowed; /* Change to pointer when pagination is active */
+  cursor: not-allowed;
 }
 </style>

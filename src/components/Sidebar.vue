@@ -94,7 +94,7 @@ function setActiveItem(id: string) {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px; /* Slightly rounded squares */
+  border-radius: 8px;
   font-weight: bold;
   font-size: 1.25rem;
 }
@@ -118,7 +118,6 @@ function setActiveItem(id: string) {
   font-weight: 400;
 }
 
-/* "Create New" Button */
 .btn-create-new {
   background-color: #001D6E;
   color: white;
@@ -139,7 +138,6 @@ function setActiveItem(id: string) {
   opacity: 0.9;
 }
 
-/* Navigation Base Styles */
 .sidebar-nav ul {
   list-style: none;
   padding: 0;
@@ -147,8 +145,10 @@ function setActiveItem(id: string) {
 }
 
 .nav-item {
-  position: relative; /* Essential for the absolute-positioned indicator */
+  position: relative;
   cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bolder;
 }
 
 .nav-link {
@@ -157,13 +157,14 @@ function setActiveItem(id: string) {
   gap: 16px;
   padding: 16px 0;
   text-decoration: none;
-  color: #4F5C86; /* Default color for inactive items */
+  color: #4F5C86;
   transition: color 0.2s ease;
 }
 
 .nav-icon {
   width: 24px;
   font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .nav-label {
@@ -171,20 +172,18 @@ function setActiveItem(id: string) {
   font-weight: 500;
 }
 
-/* Active State Styling */
 .nav-item.active .nav-link {
-  color: #001D6E; /* Primary color for active icon and text */
+  color: #001D6E;
 }
 
-/* The curved indicator bar on the right */
 .active-indicator {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: -24px; /* Move it outside the padding of the sidebar itself */
+  right: -24px;
   width: 5px;
   height: 28px;
   background-color: #001D6E;
-  border-radius: 3px; /* Gives it the slight curvature seen in the picture */
+  border-radius: 3px;
 }
 </style>
